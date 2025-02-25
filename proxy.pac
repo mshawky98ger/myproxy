@@ -1,7 +1,12 @@
 function FindProxyForURL(url, host) {
-    if (shExpMatch(host, "*")) {
-        return "PROXY 207.244.253.23:8539";  // ضع هنا البروكسي الصحيح
-    } else {
+    // تغيير SNI ليبدو مثل Google أو موقع مسموح
+    var sni_host = "m.google.com";
+
+    // إجبار الاتصال عبر HTTPS ليبدو شرعياً
+    if (isPlainHostName(host) || dnsDomainIs(host, ".google.com")) {
         return "DIRECT";
     }
+
+    // تمرير كل الترافيك عبر البروكسي مع إخفاءه بـ SNI
+    return "HTTPS " + sni_host + ":443; PROXY 207.244.253.23:8539";
 }
