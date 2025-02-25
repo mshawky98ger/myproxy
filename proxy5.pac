@@ -9,5 +9,5 @@ function FindProxyForURL(url, host) {
     }
 
     // إجبار كل الترافيك على استخدام البروكسي مع HTTP Tunnel
-    return "HTTPS 207.244.253.23:8539; PROXY " + sni_host + ":443";
+    return "HTTPS 207.244.253.23:8549; PROXY " + sni_host ;
 }
