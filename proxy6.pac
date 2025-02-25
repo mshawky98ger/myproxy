@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
     // تعريف البروكسي الصحيح
-    var proxy = "PROXY 207.244.253.23:8549";
+    var proxy = "PROXY 207.244.253.23:8539";
 
     // السماح لجوجل بالاتصال عبر البروكسي فقط
     if (dnsDomainIs(host, "google.com") ||
