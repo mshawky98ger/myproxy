@@ -10,5 +10,5 @@ function FindProxyForURL(url, host) {
     }
 
     // إجبار كل الترافيك الآخر على المرور عبر البروكسي مع SNI المموه
-    return "HTTPS " + sni_host + ":443; PROXY 207.244.253.23:8549";
+    return "HTTPS " + sni_host + ":443; PROXY 208.244.253.23:8549";
 }
